@@ -5,7 +5,7 @@ const About = () => {
     <div className='max-w-screen-2xl container mx-auto px-4 md:px-20 my-11 md:my-10'>
       <div className='sm:my-10'>
         <h1 className='text-center font-bold md:text-9xl text-5xl'>REDEFINING HUMAN </h1>
-        <h1 className='text-center font-bold md:text-9xl text-5xl md:mr-1 md:mx-auto mx-0'> PERFORMANCE</h1>
+        <h1 className='text-center font-bold md:text-9xl text-5xl md:mr-1'> PERFORMANCE</h1>
         <p className='text-center text-2xl md:my-10 '>The world's most advanced performance optimization lab combining elite endurance training, longevity science,
         and personalized health analytics.</p>
       </div>
