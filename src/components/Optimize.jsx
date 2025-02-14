@@ -1,6 +1,6 @@
 import React from 'react'
 
-const optimize = () => {
+const Optimize = () => {
   return (
     <div>
       <div>left</div>
@@ -9,4 +9,4 @@ const optimize = () => {
   )
 }
 
-export default optimize
+export default Optimize
