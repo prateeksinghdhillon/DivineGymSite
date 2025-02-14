@@ -40,7 +40,7 @@ const Navbar = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed top-16 left-1/2 transform -translate-x-1/2 bg-black text-white w-[90%] max-w-[400px] rounded-lg shadow-xl p-6 flex flex-col items-center z-50"
+            className="absolute top-16 left-1/2 transform -translate-x-1/2 bg-black text-white w-[90%] max-w-[400px] rounded-lg shadow-xl p-6 flex flex-col items-center z-50"
             initial={{ scaleY: 0, opacity: 0 }}
             animate={{ scaleY: 1, opacity: 1 }}
             exit={{ scaleY: 0, opacity: 0 }}
