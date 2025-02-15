@@ -5,15 +5,15 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="navbar max-w-screen-2xl w-full flex justify-center my-5 mx-auto px-4">
+    <nav className="navbar max-w-screen-2xl container mx-auto px-4 md:px-20 h-16 fixed top-0 left-0 right-0 navbar  w-full flex justify-center my-5">
       {/* Main Navbar (Hides when menu is open) */}
       {!isOpen && (
         <motion.div
-          className="bg-black text-white rounded-full max-w-screen-lg w-full p-4 flex justify-between items-center shadow-lg transition-opacity duration-500 ease-in-out"
+          className="bg-white/20 backdrop-blur-md text-white rounded-full max-w-screen-lg w-full p-4 flex justify-between items-center shadow-lg transition-opacity duration-500 ease-in-out"
           initial={{ opacity: 1 }}
           animate={{ opacity: isOpen ? 0 : 1 }}
         >
-          <div className="text-lg font-semibold italic px-4">'health</div>
+          <div className="text-2xl font-semibold italic px-4">'health</div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-6 text-sm">
