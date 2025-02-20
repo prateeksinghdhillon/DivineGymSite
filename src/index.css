@@ -1,4 +1,8 @@
 @import "tailwindcss";
+html{
+  max-width: 100vw;
+  overflow-x: hidden;
+}
 
 body {
   background-color: black;
