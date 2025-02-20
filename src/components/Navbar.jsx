@@ -5,7 +5,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="navbar max-w-screen-2xl container mx-auto px-4 md:px-20 h-16 fixed top-0 left-0 right-0 navbar  w-full flex justify-center my-5 z-[999]">
+    <nav className="navbar max-w-screen-2xl container mx-auto px-4 md:px-20 h-16 fixed top-0 left-0 right-0 navbar  w-full flex justify-center my-5 z-[999] geist-font-300">
       {/* Main Navbar (Hides when menu is open) */}
       {!isOpen && (
         <motion.div
@@ -16,7 +16,7 @@ const Navbar = () => {
           <div className="text-2xl font-semibold italic px-4">'health</div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-6 text-sm">
+          <div className="hidden md:flex space-x-6 md:text-lg">
             <a href="#" className="hover:text-gray-400">Optimize</a>
             <a href="#" className="hover:text-gray-400">Services</a>
             <a href="#" className="hover:text-gray-400">Testing</a>
