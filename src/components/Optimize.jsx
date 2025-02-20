@@ -61,7 +61,7 @@ const Optimize = () => {
         <div className="md:w-1/2 md:ml-12 md:mt-20 mt-8 order-1">
           <img
             src={girl}
-            className="rounded-2xl md:w-[800px] md:h-[800px] w-[400px]  mx-auto -z-10"
+            className="rounded-2xl md:w-[800px] md:h-[800px] w-[900px]  mx-auto -z-10"
             alt="Workout"
           />
         </div>
