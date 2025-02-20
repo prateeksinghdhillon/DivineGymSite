@@ -4,6 +4,24 @@ body {
   background-color: black;
 }
 
+.geist-font-700 {
+  font-family: "Geist", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.geist-font-500 {
+  font-family: "Geist", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.geist-font-300 {
+  font-family: "Geist", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
 .background-img {
   position: relative;
   width: 100%;
@@ -39,7 +57,7 @@ body {
   top: 0;
   width: 100vw;
   height: 100vh;
-  background: url('../public/9ErWmXn2IIfOUCaXNwDeuxqJXM.png') center/cover no-repeat;
+  background: url('/9ErWmXn2IIfOUCaXNwDeuxqJXM.png') repeat;
   pointer-events: none; 
   opacity: 0.4; 
 }
