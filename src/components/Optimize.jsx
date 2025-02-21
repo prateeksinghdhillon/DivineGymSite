@@ -30,8 +30,8 @@ const Optimize = () => {
   return (
     <div className="geist-font-500 max-w-10xl container mx-auto px-4 my-20">
       <div className="flex flex-col md:flex-row">
-        {/* Left Section with Animation */}
-        <div className="md:w-1/2 mt-10 md:mt-20 space-y-4 order-2 md:order-1 bg-white p-15  rounded-2xl shadow-lg">
+        {/* Left Section (White Box with Proper Padding) */}
+        <div className="md:w-1/2 mt-10 md:mt-20 space-y-4 order-2 md:order-1 bg-white p-10 md:p-16 rounded-2xl shadow-lg">
           <h2 className="text-5xl font-extrabold text-left">UNLOCK YOUR POTENTIAL</h2>
           <p className="text-gray-700 text-2xl">Your body is capable of extraordinary things</p>
 
@@ -40,13 +40,13 @@ const Optimize = () => {
             <p className="text-gray-700">Your recovery and sleep performance</p>
           </div>
 
-          <div className="mt-6">
+          <div className="mt-6 flex items-center space-x-2">
             <span className="text-5xl font-bold">↑</span>
             <Counter from={0} to={88} suffix="%" />
             <p className="text-gray-700 text-2xl md:text-3xl">Future proof your body</p>
           </div>
 
-          <ul className="mt-6 md:text-3xl text-nowrap text-lg font-semibold">
+          <ul className="mt-6 md:text-3xl text-wrap text-lg font-semibold space-y-2">
             <li>→ TRAIN SMARTER</li>
             <li>→ RECOVER FASTER</li>
             <li>→ MAINTAIN PEAK PERFORMANCE</li>
@@ -54,15 +54,14 @@ const Optimize = () => {
           </ul>
 
           <h3 className="mt-6 text-gray-700 font-extrabold md:text-5xl text-3xl">THAT’S WHY</h3>
-          <h2 className="md:text-5xl text-3xl
-          font-extrabold">OPTIMIZATION MATTERS</h2>
+          <h2 className="md:text-5xl text-3xl font-extrabold">OPTIMIZATION MATTERS</h2>
         </div>
 
-        {/* Right Section (Your Existing Image Code) */}
+        {/* Right Section (Image) */}
         <div className="md:w-1/2 md:ml-12 md:mt-20 mt-8 order-1">
           <img
             src={girl}
-            className="rounded-2xl md:w-[800px] md:h-[1200px] w-[900px]  mx-auto -z-10"
+            className="rounded-2xl md:w-[800px] md:h-[1200px] w-[900px] mx-auto"
             alt="Workout"
           />
         </div>
