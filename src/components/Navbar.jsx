@@ -5,7 +5,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="navbar max-w-screen-2xl container mx-auto px-4 md:px-20 h-16 fixed top-0 left-0 right-0 navbar  w-full flex justify-center my-5 z-[999] geist-font-300">
+    <nav className="navbar container mx-auto px-4 md:px-20 h-16 fixed top-0 left-0 right-0 w-full max-w-[100vw] flex justify-center my-5 z-[999] geist-font-300">
       {/* Main Navbar (Hides when menu is open) */}
       {!isOpen && (
         <motion.div

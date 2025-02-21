@@ -5,9 +5,9 @@ const About = () => {
     <>
     <div className=' max-w-screen-2xl container mx-auto px-4 md:px-20 my-25 md:my-30'>
       <div className='sm:my-10'>
-        <h1 className='geist-font-700 text-center font-bold md:text-9xl text-5xl text-amber-50 '>REDEFINING HUMAN </h1>
-        <h1 className='geist-font-700 text-center font-bold md:text-9xl text-5xl md:mr-1 mr-3 text-amber-50'>ABILITIES</h1>
-        <p className='geist-font-500 text-center text-2xl md:my-10 mt-10  text-amber-50'>The world's most advanced performance optimization <br />lab combining elite endurance training, longevity science,<br />and personalized health analytics.
+        <h1 className='geist-font-500 text-center font-bold md:text-9xl md:justify-center text-5xl text-amber-50 '>REDEFINE HUMAN </h1>
+        <h1 className='geist-font-500 text-center font-bold md:text-9xl text-5xl md:mr-1 text-amber-50'>ABILITIES</h1>
+        <p className='geist-font-300 text-center text-2xl md:my-10 mt-10  text-amber-50'>The world's most advanced performance optimization <br />lab combining elite endurance training, longevity science,<br />and personalized health analytics.
         </p>
       </div>
       <div className="flex items-center justify-center ">

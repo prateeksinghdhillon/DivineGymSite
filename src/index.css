@@ -1,11 +1,11 @@
 @import "tailwindcss";
-html{
+
+html body {
+  background-color: black;
   max-width: 100vw;
   overflow-x: hidden;
-}
-
-body {
-  background-color: black;
+  margin: 0;
+  padding: 0;
 }
 
 .geist-font-700 {
@@ -28,7 +28,7 @@ body {
 }
 .background-img {
   position: relative;
-  width: 100%;
+  width: 100vw;
   min-height: 100vh; /* Ensures it spans the entire viewport */
   background-image: url("/rider.webp"); /* Ensure the correct path */
   background-position: center;
@@ -60,7 +60,7 @@ body {
   position: fixed;
   top: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background: url('/9ErWmXn2IIfOUCaXNwDeuxqJXM.png') repeat;
   pointer-events: none; 
   opacity: 0.4; 
