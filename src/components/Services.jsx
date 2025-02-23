@@ -29,14 +29,14 @@ const Services = () => {
       </div>
 
       {/* Accordion Section Below */}
-      <div className="mt-20">
+      <div className="mt-20 md:mx-20 mx-5">
         {sections.map((section) => (
           <div key={section.id} className="border-b border-gray-600">
             <div
-              className="flex justify-between items-center p-6 cursor-pointer hover:bg-gray-800 transition"
+              className="flex justify-between items-center p-6 cursor-pointer  transition"
               onClick={() => toggleSection(section.id)}
             >
-              <h2 className="text-2xl font-bold">{section.title}</h2>
+              <h2 className="md:text-5xl text-2xl font-bold md:mx-20 ">{section.title}</h2>
               {openSection === section.id ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
             </div>
             {openSection === section.id && <div className="p-6">{section.content}</div>}
