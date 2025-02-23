@@ -3,6 +3,8 @@ import About from './components/About'
 import Navbar from './components/Navbar'
 import Optimize from './components/Optimize'
 import Services from './components/Services'
+import Testing from './components/Testing'
+
 
 
 function App() {
@@ -16,6 +18,7 @@ function App() {
     </div>
     <Optimize/>
     <Services/>
+    <Testing/>
     </>
     
   )
