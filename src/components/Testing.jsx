@@ -4,7 +4,7 @@ const Testing = () => {
   return (
     <section className="bg-black py-24 md:py-32">
       <div className="container mx-auto px-4 max-w-screen-2xl">
-        <div className="bg-white rounded-4xl border border-gray-800 p-2 md:p-16 md:-m-20">
+        <div className="bg-white rounded-4xl border border-gray-800 p-2 md:p-16">
           <div className="text-center mb-12">
             <h2 className="text-gray-500 text-base md:text-lg uppercase">
               Unlock your full potential through advanced training protocols
