@@ -115,4 +115,36 @@ const sections = [
   },
 ];
 
-export { sections };
+const slides = [
+  {
+    id: 1,
+    title: "Complete Assessment",
+    heading: "COMPREHENSIVE TESTING OF PERFORMANCE MARKERS AND BIOMARKERS",
+    image: "/assets/womanrunner.jpg", 
+    bgColor: "bg-[#F4FB8C]",
+  },
+  {
+    id: 2,
+    title: "Data Analysis",
+    heading: "AI-POWERED ANALYSIS OF YOUR COMPLETE HEALTH PROFILE",
+    image: "/assets/laptop.jpg", 
+    bgColor: "bg-[#9091FB]",
+  },
+  {
+    id: 3,
+    title: "Custom Protocol",
+    heading: "PERSONALIZED TRAINING AND OPTIMIZATION PROGRAM",
+    image: "/assets/girlrider.jpg", 
+    bgColor: "bg-[#62D598]",
+  },
+  {
+    id: 4,
+    title: "Ongoing Support",
+    heading: "REGULAR MONITORING AND PROTOCOL ADJUSTMENTS",
+    image: "/assets/manmirror.jpg", 
+    bgColor: "bg-[#ECECEC]",
+  },
+];
+
+
+export { sections, slides };

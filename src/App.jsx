@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Optimize from './components/Optimize'
 import Services from './components/Services'
 import Testing from './components/Testing'
+import OurProcess from './components/OurProcess'
 
 
 
@@ -19,6 +20,7 @@ function App() {
     <Optimize/>
     <Services/>
     <Testing/>
+    <OurProcess/>
     </>
     
   )
