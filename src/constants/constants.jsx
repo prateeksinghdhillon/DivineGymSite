@@ -146,5 +146,39 @@ const slides = [
   },
 ];
 
+const membershipPlans = [
+  {
+    title: "FOUNDATION",
+    price: "$299",
+    features: [
+      "Custom Programming",
+      "Semi-Weekly Meetings",
+      "App Access",
+      "Basic Product Discounts"
+    ]
+  },
+  {
+    title: "PERFORMANCE",
+    price: "$599",
+    features: [
+      "Quarterly Testing",
+      "Advanced Protocol Design",
+      "Weekly Coach Check-In",
+      "Weekly Coach Check-In",
+      "Product Discounts"
+    ]
+  },
+  {
+    title: "ELITE",
+    price: "$999",
+    features: [
+      "Monthly Testing",
+      "Fully Customized Protocols",
+      "Priority Scheduling & Support",
+      "Maximum Product Discounts",
+      "Maximum Product Discounts"
+    ]
+  }
+];
 
-export { sections, slides };
+export { sections, slides, membershipPlans };
