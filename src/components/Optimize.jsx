@@ -149,7 +149,7 @@ const Optimize = () => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: false, threshold: 0.1 }}
-            className="overflow-hidden rounded-2xl"
+            className="overflow-hidden  rounded-2xl"
           >
             <img 
               src={girl} 
