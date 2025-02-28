@@ -14,7 +14,9 @@ const Services = () => {
     setOpenSection(openSection === id ? null : id);
   };
   return (
-    <div className=" max-w-8xl mx-auto text-white geist-font-700">
+    <div 
+    id='services'
+    className=" max-w-8xl mx-auto text-white geist-font-700">
       {/* New Section Above */}
       <div className="flex flex-col md:flex-row items-end gap-8 bg-black p-10 rounded-lg">
         <button 

@@ -14,7 +14,9 @@ export default function OurProcess() {
   };
 
   return (
-    <div className="w-full py-12 px-4 text-white relative max-w-full mx-auto">
+    <div 
+    id="process"
+    className="w-full py-12 px-4 text-white relative max-w-full mx-auto">
       <h2 className="md:text-6xl text-4xl font-bold text-center">
         YOUR JOURNEY TO <span className="text-yellow-300 ">PEAK PERFORMANCE</span>
       </h2>

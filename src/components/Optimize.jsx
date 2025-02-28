@@ -93,6 +93,7 @@ const Optimize = () => {
 
   return (
     <div 
+      id="optimize"
       ref={sectionRef} 
       className="geist-font-500 max-w-10xl container mx-auto px-4 my-20"
     >

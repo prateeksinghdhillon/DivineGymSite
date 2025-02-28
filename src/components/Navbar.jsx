@@ -1,14 +1,15 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import WaitlistModal from "./WaitlistModal";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  
+
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
-  
+
   // Add this function to handle form submissions
   const handleSubmit = async (data) => {
     // Here you would handle the actual submission to your backend
@@ -28,11 +29,21 @@ const Navbar = () => {
           <div className="text-xl md:text-2xl font-semibold italic px-4">'health</div>
 
           <div className="hidden md:flex space-x-6 text-lg">
-            <a href="#" className="hover:text-gray-400">Optimize</a>
-            <a href="#" className="hover:text-gray-400">Services</a>
-            <a href="#" className="hover:text-gray-400">Testing</a>
-            <a href="#" className="hover:text-gray-400">Our Process</a>
-            <a href="#" className="hover:text-gray-400">Membership</a>
+            <Link to="optimize" smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
+              Optimize
+            </Link>
+            <Link to="services" smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
+              Services
+            </Link>
+            <Link to="testing" smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
+              Testing
+            </Link>
+            <Link to="process" smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
+              Our Process
+            </Link>
+            <Link to="membership" smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
+              Membership
+            </Link>
           </div>
 
           <button
@@ -65,11 +76,21 @@ const Navbar = () => {
             <div className="text-xl font-semibold italic absolute top-6 left-6">'health</div>
 
             <div className="flex flex-col items-center space-y-6 text-lg font-medium mt-10">
-              <a href="#" className="hover:text-gray-400">Optimize</a>
-              <a href="#" className="hover:text-gray-400">Services</a>
-              <a href="#" className="hover:text-gray-400">Testing</a>
-              <a href="#" className="hover:text-gray-400">Our Process</a>
-              <a href="#" className="hover:text-gray-400">Membership</a>
+              <Link to="optimize" smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
+                Optimize
+              </Link>
+              <Link to="services" smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
+                Services
+              </Link>
+              <Link to="testing" smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
+                Testing
+              </Link>
+              <Link to="process" smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
+                Our Process
+              </Link>
+              <Link to="membership" smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
+                Membership
+              </Link>
             </div>
 
             <button onClick={openModal} className="mt-8 w-full bg-white text-gray-800 py-3 rounded-full font-semibold text-lg">

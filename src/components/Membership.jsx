@@ -9,7 +9,7 @@ const Membership = () => {
   const closeModal =() => setIsModalOpen(false);
 
   return (
-    <div className="text-white py-16 px-4 w-full">
+    <div id='membership' className="text-white py-16 px-4 w-full">
       <div className="max-w-7xl mx-auto">
         {/* Header text */}
         <p className="text-center text-[10px] uppercase tracking-wider mb-2">
