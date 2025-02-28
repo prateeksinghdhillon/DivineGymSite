@@ -23,8 +23,11 @@ const Testing = () => {
                 Establish your foundational fitness markers and training zones to optimize future progress
               </p>
               <p className="text-black text-3xl font-bold mt-8">$250 per test</p>
-              <button className="bg-gray-200 text-black px-8 py-4 rounded-4xl mt-8 flex items-center justify-center w-full text-lg cursor-pointer">
-                Buy now & schedule <span className="ml-2">→</span>
+              <button className="bg-gray-200 text-black px-8 py-4 rounded-4xl mt-8 w-full text-lg cursor-pointer group transition-all hover:shadow-md">
+                <div className="flex items-center justify-center transition-transform duration-300 ease-in-out">
+                  <span className="transition-transform duration-300 ease-in-out group-hover:translate-x-[-10px]">Buy now & schedule</span>
+                  <span className="ml-2 transition-transform duration-300 ease-in-out group-hover:translate-x-[10px]">→</span>
+                </div>
               </button>
               <ul className="mt-8 text-gray-600 space-y-4 text-lg">
                 <li>✓ Lactate Testing Protocol</li>
@@ -41,8 +44,11 @@ const Testing = () => {
                 Advanced metabolic assessment to fine-tune training zones and maximize race-day performance
               </p>
               <p className="text-black text-3xl font-bold mt-8">$350 per test</p>
-              <button className="bg-gray-200 text-black px-8 py-4 rounded-4xl mt-8 flex items-center justify-center w-full text-lg cursor-pointer">
-                Buy now & schedule <span className="ml-2">→</span>
+              <button className="bg-gray-200 text-black px-8 py-4 rounded-4xl mt-8 w-full text-lg cursor-pointer group transition-all hover:shadow-md">
+                <div className="flex items-center justify-center transition-transform duration-300 ease-in-out">
+                  <span className="transition-transform duration-300 ease-in-out group-hover:translate-x-[-10px]">Buy now & schedule</span>
+                  <span className="ml-2 transition-transform duration-300 ease-in-out group-hover:translate-x-[10px]">→</span>
+                </div>
               </button>
               <ul className="mt-8 text-gray-600 space-y-4 text-lg">
                 <li>✓ VO2 Max Testing</li>
@@ -61,8 +67,11 @@ const Testing = () => {
                 Complete physiological profiling for elite athletes seeking the ultimate competitive advantage. Coming soon
               </p>
               <p className="text-black text-3xl font-bold mt-8">$900 per test</p>
-              <button className="bg-black text-white px-8 py-4 mt-8 flex items-center justify-center w-full text-lg cursor-pointer rounded-4xl">
-                Contact us <span className="ml-2">→</span>
+              <button className="bg-black text-white px-8 py-4 rounded-4xl mt-8 w-full text-lg cursor-pointer group transition-all hover:shadow-md">
+                <div className="flex items-center justify-center transition-transform duration-300 ease-in-out">
+                  <span className="transition-transform duration-300 ease-in-out group-hover:translate-x-[-10px]"> Contact us </span>
+                  <span className="ml-2 transition-transform duration-300 ease-in-out group-hover:translate-x-[10px]">→</span>
+                </div>
               </button>
               <ul className="mt-8 text-gray-600 space-y-4 text-lg">
                 <li>✓ VO2 Max Testing</li>

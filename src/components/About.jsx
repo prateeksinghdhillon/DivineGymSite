@@ -15,8 +15,11 @@ const About = () => {
         </p>
       </div>
       <div className="flex items-center justify-center mt-6">
-        <button className="geist-font-500 px-6 py-2 md:px-8 md:py-3 bg-yellow-200 text-gray-800 rounded-full text-lg md:text-xl font-medium shadow-lg hover:shadow-xl transition-all">
-          Join waitlist →
+        <button className="geist-font-500 px-6 py-2 md:px-8 md:py-3 bg-yellow-200 text-gray-800 rounded-full text-lg md:text-xl font-medium shadow-lg hover:shadow-xl transition-all group relative overflow-hidden">
+          <div className="flex items-center justify-center transition-transform duration-300 ease-in-out group-hover:translate-x-[-10px]">
+            <span>Join waitlist</span>
+            <span className="ml-1 transition-all duration-300 ease-in-out group-hover:translate-x-[20px]">→</span>
+          </div>
         </button>
       </div>
     </div>

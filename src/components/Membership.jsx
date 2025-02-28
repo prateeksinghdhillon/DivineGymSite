@@ -6,12 +6,12 @@ const Membership = () => {
     <div className="text-white py-16 px-4 w-full">
       <div className="max-w-7xl mx-auto">
         {/* Header text */}
-        <p className="text-center text-[10px] md:text-sm uppercase tracking-wider mb-2">
+        <p className="text-center text-[10px] uppercase tracking-wider mb-2">
           UNLOCK YOUR FULL POTENTIAL THROUGH ADVANCED TRAINING PROTOCOLS
         </p>
         
         {/* Title */}
-        <h1 className="text-center text-gray-300 md:text-8xl text-4xl font-bold mb-12 md:mb-16">
+        <h1 className="text-center text-gray-300 text-4xl md:text-8xl font-bold mb-12 md:mb-16">
           MEMBERSHIPS
         </h1>
         
@@ -26,12 +26,15 @@ const Membership = () => {
                 <span className="text-gray-500 ml-1">per month</span>
               </div>
               
+              {/* Updated Buy now button with animation */}
               <button 
-                className={`w-full relative flex items-center justify-between bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-full py-3 px-5 mb-10 transition-all
-                ${plan.title === "ELITE" ? "bg-gray-800 text-white hover:bg-gray-700" : ""}`}
+                className={`w-full relative flex items-center justify-between rounded-full py-3 px-5 mb-10 transition-all group
+                ${plan.title === "ELITE" ? "bg-black text-white hover:bg-black" : "bg-gray-100 hover:bg-gray-200 text-gray-800"}`}
               >
-                <span>Buy now</span>
-                <span className="transform">→</span>
+                <div className="flex items-center justify-between w-full transition-transform duration-300 ease-in-out">
+                  <span className="transition-transform duration-300 ease-in-out group-hover:translate-x-[-8px]">Buy now</span>
+                  <span className="transition-transform duration-300 ease-in-out group-hover:translate-x-[8px]">→</span>
+                </div>
               </button>
               
               <div className="space-y-3">
