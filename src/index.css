@@ -6,6 +6,7 @@ html body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 .geist-font-700 {
@@ -28,9 +29,8 @@ html body {
 }
 .background-img {
   position: relative;
-  width: 100vw;
-  min-height: 100vh; /* Ensures it spans the entire viewport */
-  background-image: url("/rider.webp"); /* Ensure the correct path */
+  min-height: 100vh;
+  background-image: url("/rider.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -40,21 +40,20 @@ html body {
 
 /* Overlay effect for fading */
 .bg-fade-image {
-  background-image: url('/rider.webp'); /* Ensure correct image path */
+  background-image: url('/rider.webp'); 
   background-size: cover;
   background-position: center;
   position: relative;
 }
 
-.bg-fade-image::after {
+.background-img::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 50%; /* Adjusted fade height */
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);
-  pointer-events: none; /* Prevents interactions */
+  height: 10%; 
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, black 100%);
 }
 .overlay-image {
   position: fixed;
@@ -64,4 +63,5 @@ html body {
   background: url('/9ErWmXn2IIfOUCaXNwDeuxqJXM.png') repeat;
   pointer-events: none; 
   opacity: 0.4; 
+  z-index: 20;
 }

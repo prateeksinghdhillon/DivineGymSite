@@ -35,7 +35,7 @@ export default function OurProcess() {
           {slides.map((slide, i) => (
             <button
               key={slide.id}
-              className={`md:px-4 py-2 rounded-full text-sm transition-all ${i === index ? "bg-white text-black" : "md:bg-gray-700"
+              className={`md:px-4 py-2 rounded-full text-sm transition-all ${i === index ? "bg-white text-black" : "md:bg-black"
                 }`}
               onClick={() => setIndex(i)}
             >

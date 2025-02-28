@@ -1,6 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
+import WaitlistModal from './WaitlistModal';
 
 const FooterInterestSection = () => {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+    
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
+
   return (
     <div className=" text-white">
       {/* Hero section with cyclist image */}
@@ -13,10 +20,13 @@ const FooterInterestSection = () => {
               href="#waitlist"
               className="bg-yellow-200 text-gray-800 rounded-full py-2 px-5 inline-flex items-center justify-between w-48 group transition-all hover:shadow-lg"
             >
-              <div className="flex items-center justify-between w-full transition-transform duration-300 ease-in-out">
+              <button
+              onClick={openModal}
+              className="flex items-center justify-between w-full transition-transform duration-300 ease-in-out">
                 <span className="transition-transform duration-300 ease-in-out group-hover:translate-x-[-5px]">Join waitlist</span>
                 <span className="transition-transform duration-300 ease-in-out group-hover:translate-x-[5px]">→</span>
-              </div>
+              </button>
+              <WaitlistModal isOpen={isModalOpen} onClose={closeModal} />
             </a>
           </div>
 

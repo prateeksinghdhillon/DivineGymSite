@@ -1,11 +1,24 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import WaitlistModal from "./WaitlistModal";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+  
+  // Add this function to handle form submissions
+  const handleSubmit = async (data) => {
+    // Here you would handle the actual submission to your backend
+    console.log('Form submitted with data:', data);
+    // You can add your API call here
+    return Promise.resolve(); // Mock successful submission
+  };
 
   return (
-    <nav className="navbar container mx-auto px-4 md:px-20 h-16 fixed top-0 left-0 right-0 w-full max-w-[100vw] flex justify-center my-5 z-[999] geist-font-300">
+    <nav className="navbar mx-auto px-4 md:px-20 h-16 fixed top-0 left-0 right-0 w-full max-w-[100vw] flex justify-center my-5 z-20 geist-font-300">
       {!isOpen && (
         <motion.div
           className="bg-black/50 backdrop-blur-md text-white rounded-full max-w-screen-lg w-full p-4 flex justify-between items-center shadow-lg"
@@ -22,7 +35,9 @@ const Navbar = () => {
             <a href="#" className="hover:text-gray-400">Membership</a>
           </div>
 
-          <button className="hidden md:block bg-white text-gray-800 px-4 py-2 rounded-full font-semibold">
+          <button
+            onClick={openModal}
+            className="hidden md:block bg-white text-gray-800 px-4 py-2 rounded-full font-semibold">
             Join Waitlist
           </button>
 
@@ -32,10 +47,13 @@ const Navbar = () => {
         </motion.div>
       )}
 
+      {/* Move WaitlistModal outside both conditional renders */}
+      <WaitlistModal isOpen={isModalOpen} onClose={closeModal} onSubmit={handleSubmit} />
+
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="absolute top-16 left-1/2 transform -translate-x-1/2 bg-black text-white w-[90%] max-w-[400px] rounded-lg shadow-xl p-6 flex flex-col items-center z-50"
+            className="absolute top-16 left-1/2 transform -translate-x-1/2 bg-black text-white w-[90%] max-w-[400px] rounded-lg shadow-xl p-6 flex flex-col items-center z-30"
             initial={{ scaleY: 0, opacity: 0 }}
             animate={{ scaleY: 1, opacity: 1 }}
             exit={{ scaleY: 0, opacity: 0 }}
@@ -54,7 +72,7 @@ const Navbar = () => {
               <a href="#" className="hover:text-gray-400">Membership</a>
             </div>
 
-            <button className="mt-8 w-full bg-white text-gray-800 py-3 rounded-full font-semibold text-lg">
+            <button onClick={openModal} className="mt-8 w-full bg-white text-gray-800 py-3 rounded-full font-semibold text-lg">
               Join Waitlist
             </button>
           </motion.div>

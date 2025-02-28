@@ -1,7 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { membershipPlans } from '../constants/constants';
+import WaitlistModal from './WaitlistModal';
 
 const Membership = () => {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const openModal = () => setIsModalOpen(true);
+  const closeModal =() => setIsModalOpen(false);
+
   return (
     <div className="text-white py-16 px-4 w-full">
       <div className="max-w-7xl mx-auto">
@@ -28,6 +34,7 @@ const Membership = () => {
               
               {/* Updated Buy now button with animation */}
               <button 
+                onClick={openModal}
                 className={`w-full relative flex items-center justify-between rounded-full py-3 px-5 mb-10 transition-all group
                 ${plan.title === "ELITE" ? "bg-black text-white hover:bg-black" : "bg-gray-100 hover:bg-gray-200 text-gray-800"}`}
               >
@@ -36,7 +43,7 @@ const Membership = () => {
                   <span className="transition-transform duration-300 ease-in-out group-hover:translate-x-[8px]">→</span>
                 </div>
               </button>
-              
+              <WaitlistModal isOpen={isModalOpen} onClose={closeModal} />
               <div className="space-y-3">
                 {plan.features.map((feature, i) => (
                   <div key={i} className="flex items-start">
