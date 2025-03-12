@@ -36,7 +36,7 @@ const FooterInterestSection = () => {
           {/* Description text */}
           <p className="text-lg md:text-xl max-w-xl">
             Join elite athletes and health optimizers who trust
-            Enroute Labs for their performance and longevity goals.
+            Divine Fitness for their performance and longevity goals.
           </p>
         </div>
 
@@ -56,16 +56,16 @@ const FooterInterestSection = () => {
           {/* Copyright and social links */}
           <div className="mb-8 md:mb-0">
             <div className="mb-2">
-              <p className="text-sm">© 2020—2024</p>
-              <p className="text-sm">ENROUTE LABS.</p>
+              <p className="text-sm">© 2025</p>
+              <p className="text-sm">Divine Fitness</p>
             </div>
 
             <div className="flex flex-col space-y-1 mt-4">
-              <a href="#instagram" className="text-sm flex items-center">
+              <a href="https://www.instagram.com/divineunisexgym/" className="text-sm flex items-center">
                 INSTAGRAM <span className="ml-1">→</span>
               </a>
-              <a href="#facebook" className="text-sm flex items-center">
-                FACEBOOK <span className="ml-1">→</span>
+              <a href="https://www.instagram.com/shalabh_chaudharyy18/" className="text-sm flex items-center">
+                Shalabh <span className="ml-1">→</span>
               </a>
               <a href="#spotify" className="text-sm flex items-center">
                 SPOTIFY <span className="ml-1">→</span>
@@ -75,7 +75,7 @@ const FooterInterestSection = () => {
 
           {/* Health logo and policy links */}
           <div className="flex flex-col items-end">
-            <img src="/health.svg" alt="health" className="h-36 md:h-40 mb-4" />
+            <img src="/Transparent.png" alt="health" className="h-36 md:h-50 mb-4" />
 
             <div className="flex space-x-4 text-xs text-gray-400">
               <a href="#terms" className="hover:text-white">TERMS & CONDITIONS</a>

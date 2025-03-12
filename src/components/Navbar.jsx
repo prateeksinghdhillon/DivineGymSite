@@ -26,7 +26,10 @@ const Navbar = () => {
           initial={{ opacity: 1 }}
           animate={{ opacity: isOpen ? 0 : 1 }}
         >
-          <div className="text-xl md:text-2xl font-semibold italic px-4">'health</div>
+          <div className="text-xl md:text-2xl font-semibold italic px-4">
+            <img src="/Divinelogo.png" alt="Health Logo" className="h-8 w-auto inline-block" />
+          </div>
+
 
           <div className="hidden md:flex space-x-6 text-lg">
             <Link to="optimize" smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
@@ -73,7 +76,10 @@ const Navbar = () => {
               ✖
             </button>
 
-            <div className="text-xl font-semibold italic absolute top-6 left-6">'health</div>
+            <div className="absolute top-6 left-6">
+              <img src="/Divinelogo.png" alt="Health Logo" className="h-8 w-auto" />
+            </div>
+
 
             <div className="flex flex-col items-center space-y-6 text-lg font-medium mt-10">
               <Link to="optimize" smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
