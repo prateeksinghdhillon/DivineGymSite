@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { motion, useAnimation, useScroll, useTransform } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import girl from "/girl.webp"; 
+// import girl from "/girl.webp"; 
+import shalabh from "/shalabh.png";
 
 const Counter = ({ from, to, suffix = "", duration = 1.5 }) => {
   const [displayValue, setDisplayValue] = React.useState(from);
@@ -153,7 +154,7 @@ const Optimize = () => {
             className="overflow-hidden  rounded-2xl"
           >
             <img 
-              src={girl} 
+              src={shalabh} 
               className="w-full h-full object-cover absolute top-0 left-0 rounded-2xl"
               alt="Workout"
               style={{
