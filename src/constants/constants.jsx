@@ -148,8 +148,8 @@ const slides = [
 
 const membershipPlans = [
   {
-    title: "FOUNDATION",
-    price: "$299",
+    title: "Monthly",
+    price: "₹1000",
     features: [
       "Custom Programming",
       "Semi-Weekly Meetings",
@@ -158,8 +158,8 @@ const membershipPlans = [
     ]
   },
   {
-    title: "PERFORMANCE",
-    price: "$599",
+    title: "Quarterly",
+    price: "₹3000",
     features: [
       "Quarterly Testing",
       "Advanced Protocol Design",
@@ -169,8 +169,8 @@ const membershipPlans = [
     ]
   },
   {
-    title: "ELITE",
-    price: "$999",
+    title: "Half Yearly",
+    price: "₹5000",
     features: [
       "Monthly Testing",
       "Fully Customized Protocols",

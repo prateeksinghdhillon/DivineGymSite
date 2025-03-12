@@ -29,7 +29,6 @@ const Membership = () => {
               
               <div className="flex items-baseline mb-8">
                 <span className="text-4xl font-bold">{plan.price}</span>
-                <span className="text-gray-500 ml-1">per month</span>
               </div>
               
               {/* Updated Buy now button with animation */}
