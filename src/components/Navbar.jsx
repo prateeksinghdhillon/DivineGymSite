@@ -38,9 +38,6 @@ const Navbar = () => {
             <Link to="services" smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
               Services
             </Link>
-            <Link to="testing" smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
-              Testing
-            </Link>
             <Link to="process" smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
               Our Process
             </Link>
@@ -87,9 +84,6 @@ const Navbar = () => {
               </Link>
               <Link to="services" smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
                 Services
-              </Link>
-              <Link to="testing" smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
-                Testing
               </Link>
               <Link to="process" smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
                 Our Process
