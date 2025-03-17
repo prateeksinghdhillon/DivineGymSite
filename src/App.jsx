@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-    <div className='background-img bg-fade-img'>
+    <div id="about" className='background-img bg-fade-img'>
     <Navbar/>
     <About/>
     </div>
