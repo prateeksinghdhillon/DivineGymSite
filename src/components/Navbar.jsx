@@ -33,7 +33,7 @@ const Navbar = () => {
 
           <div className="hidden md:flex space-x-6 text-lg">
           <Link to="about" smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
-              About Us
+              Home
             </Link>
             <Link to="optimize" smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
               Optimize
@@ -83,7 +83,7 @@ const Navbar = () => {
 
             <div  className="flex flex-col items-center space-y-6 text-lg font-medium mt-10">
             <Link to="about" onClick={() => setIsOpen(false)} smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
-                About Us
+                Home
               </Link>
             <Link to="optimize" onClick={() => setIsOpen(false)} smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
                 Optimize
