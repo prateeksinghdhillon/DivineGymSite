@@ -11,14 +11,14 @@ const About = () => {
   return (
     <div className="max-w-screen-2xl container mx-auto px-4 md:px-20 my-10 md:my-10">
       <div className="sm:my-10">
-        <h1 className="geist-font-500 text-center font-bold text-4xl md:text-9xl text-white leading-tight">
-          REDEFINE HUMAN
+        <h1 className="geist-font-500 text-center font-bold text-4xl md:text-8xl text-white leading-tight">
+        ELEVATE YOUR FITNESS
         </h1>
-        <h1 className="geist-font-500 text-center font-bold text-4xl md:text-9xl text-white leading-tight">
-          ABILITIES
+        <h1 className="geist-font-500 text-center font-bold text-4xl md:text-8xl text-white leading-tight">
+        REDEFINE LIMITS
         </h1>
         <p className="geist-font-300 text-center text-lg md:text-3xl mt-6 md:mt-10 text-white leading-relaxed">
-          The world's most advanced performance optimization <br /> lab combining elite endurance training, longevity science,<br /> and personalized health analytics.
+        Push your limits with elite training, cutting-edge fitness programs, and expert coaching. Unlock peak performance and redefine what possible.
         </p>
       </div>
       <div className="flex items-center justify-center mt-6">

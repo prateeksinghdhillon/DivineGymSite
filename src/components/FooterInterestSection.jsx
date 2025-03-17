@@ -15,7 +15,7 @@ const FooterInterestSection = () => {
         <div className="relative z-10 p-8 md:p-12 lg:p-16 max-w-2xl">
           {/* Interested heading with button */}
           <div className="flex flex-col md:flex-row md:items-center gap-4 mb-4">
-            <h2 className="text-yellow-200 text-4xl md:text-5xl font-bold">INTERESTED?</h2>
+            <h2 className="text-yellow-200 text-4xl md:text-5xl font-bold">Ready to Elevate Your Performance?</h2>
             <a
               href="#waitlist"
               className="bg-yellow-200 text-gray-800 rounded-full py-2 px-5 inline-flex items-center justify-between w-48 group transition-all hover:shadow-lg"
@@ -23,7 +23,7 @@ const FooterInterestSection = () => {
               <button
               onClick={openModal}
               className="flex items-center justify-between w-full transition-transform duration-300 ease-in-out">
-                <span className="transition-transform duration-300 ease-in-out group-hover:translate-x-[-5px]">Join waitlist</span>
+                <span className="transition-transform duration-300 ease-in-out group-hover:translate-x-[-5px]">Join Us</span>
                 <span className="transition-transform duration-300 ease-in-out group-hover:translate-x-[5px]">→</span>
               </button>
               <WaitlistModal isOpen={isModalOpen} onClose={closeModal} />
@@ -35,8 +35,7 @@ const FooterInterestSection = () => {
 
           {/* Description text */}
           <p className="text-lg md:text-xl max-w-xl">
-            Join elite athletes and health optimizers who trust
-            Divine Fitness for their performance and longevity goals.
+          Join a community of fitness enthusiasts and elite performers who trust Divine Fitness for expert training and long-term health.
           </p>
         </div>
 
@@ -62,25 +61,11 @@ const FooterInterestSection = () => {
 
             <div className="flex flex-col space-y-1 mt-4">
               <a href="https://www.instagram.com/divineunisexgym/" className="text-sm flex items-center">
-                INSTAGRAM <span className="ml-1">→</span>
+                OUR INSTAGRAM <span className="ml-1">→</span>
               </a>
               <a href="https://www.instagram.com/shalabh_chaudharyy18/" className="text-sm flex items-center">
-                Shalabh <span className="ml-1">→</span>
+                Meet Shalabh <span className="ml-1">→</span>
               </a>
-              <a href="#spotify" className="text-sm flex items-center">
-                SPOTIFY <span className="ml-1">→</span>
-              </a>
-            </div>
-          </div>
-
-          {/* Health logo and policy links */}
-          <div className="flex flex-col items-end">
-            <img src="/Transparent.png" alt="health" className="h-36 md:h-50 mb-4" />
-
-            <div className="flex space-x-4 text-xs text-gray-400">
-              <a href="#terms" className="hover:text-white">TERMS & CONDITIONS</a>
-              <a href="#cookies" className="hover:text-white">COOKIES POLICY</a>
-              <a href="#privacy" className="hover:text-white">PRIVACY POLICY</a>
             </div>
           </div>
         </div>

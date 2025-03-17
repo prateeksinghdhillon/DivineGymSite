@@ -115,7 +115,7 @@ const Optimize = () => {
             <p className="text-gray-700">Your recovery and sleep performance</p>
           </div>
 
-          <div className="mt-6 flex items-center space-x-2">
+          <div className="mt-6 items-center space-x-2">
             <span className="text-5xl font-bold">↑</span>
             <Counter from={10} to={88} suffix="%" duration={2.5} />
             <p className="text-gray-700 text-2xl md:text-3xl">Future proof your body</p>
