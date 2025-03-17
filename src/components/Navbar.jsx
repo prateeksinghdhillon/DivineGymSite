@@ -78,17 +78,17 @@ const Navbar = () => {
             </div>
 
 
-            <div className="flex flex-col items-center space-y-6 text-lg font-medium mt-10">
-              <Link to="optimize" smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
+            <div  className="flex flex-col items-center space-y-6 text-lg font-medium mt-10">
+              <Link to="optimize" onClick={() => setIsOpen(false)} smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
                 Optimize
               </Link>
-              <Link to="services" smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
+              <Link to="services" onClick={() => setIsOpen(false)} smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
                 Services
               </Link>
-              <Link to="process" smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
+              <Link to="process" onClick={() => setIsOpen(false)}  smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
                 Our Process
               </Link>
-              <Link to="membership" smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
+              <Link to="membership"onClick={() => setIsOpen(false)} smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
                 Membership
               </Link>
             </div>
