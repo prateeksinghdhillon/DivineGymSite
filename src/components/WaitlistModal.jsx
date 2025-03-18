@@ -3,7 +3,36 @@ import React, { useState, useEffect } from 'react';
 const WaitlistModal = ({ isOpen, onClose, onSubmit }) => {
   const [email, setEmail] = useState('');
   const [firstName, setFirstName] = useState('');
+  const [phoneNo, setPhoneNo] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const googleFormURL = "https://docs.google.com/forms/d/e/1FAIpQLScWV6esxXTf0LK_OdF6tlab3tv-jw2fsV2JcQ9AZZ-yA0zd3w/formResponse";
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const formData = new FormData();
+    formData.append("entry.303078323", email);
+    formData.append("entry.949428823", firstName);
+    formData.append("entry.1282667690", phoneNo);
+    try {
+      fetch(googleFormURL, {
+        method: "POST",
+        body: formData,
+        mode: "no-cors",
+      });
+      alert("Submitted successfully!");
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    } finally {
+      setIsSubmitting(false);
+      setEmail("");
+      setFirstName("");
+      setPhoneNo("");
+      onClose();
+    }
+  };
 
   // Close modal when Escape key is pressed
   useEffect(() => {
@@ -14,7 +43,7 @@ const WaitlistModal = ({ isOpen, onClose, onSubmit }) => {
     };
 
     window.addEventListener('keydown', handleEscKey);
-    
+
     // Prevent scrolling on body when modal is open
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -28,28 +57,6 @@ const WaitlistModal = ({ isOpen, onClose, onSubmit }) => {
     };
   }, [isOpen, onClose]);
 
-  // Handle form submission
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    
-    if (!email || !firstName) return;
-    
-    setIsSubmitting(true);
-    
-    try {
-      await onSubmit({ email, firstName });
-      // Clear form on successful submission
-      setEmail('');
-      setFirstName('');
-      // Close modal after successful submission
-      onClose();
-    } catch (error) {
-      console.error('Error submitting form:', error);
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   // If modal is not open, don't render anything
   if (!isOpen) return null;
 
@@ -57,7 +64,7 @@ const WaitlistModal = ({ isOpen, onClose, onSubmit }) => {
     <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
       <div className="relative bg-white rounded-3xl max-w-md w-full p-8 shadow-xl">
         {/* Close button */}
-        <button 
+        <button
           onClick={onClose}
           className="absolute top-6 right-6 text-gray-500 hover:text-gray-700"
           aria-label="Close"
@@ -70,11 +77,11 @@ const WaitlistModal = ({ isOpen, onClose, onSubmit }) => {
         {/* Modal content */}
         <div>
           <h2 className="text-3xl font-bold mb-4">SIGN UP FOR WAITLIST</h2>
-          
+
           <p className="text-gray-700 mb-6">
-            Join the waitlist for early access to Enroute Labs. We'll reach out to you as more spots become available.
+            Join our waitlist to get early access to Divine Fitness. We'll reach out to you as soon as new spots open up!
           </p>
-          
+
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
               <label htmlFor="email" className="block text-gray-700 mb-2">
@@ -90,7 +97,7 @@ const WaitlistModal = ({ isOpen, onClose, onSubmit }) => {
                 className="w-full p-3 border border-gray-300 rounded-md text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400"
               />
             </div>
-            
+
             <div className="mb-6">
               <label htmlFor="firstName" className="block text-gray-700 mb-2">
                 First name<span className="text-red-500">*</span>
@@ -105,7 +112,22 @@ const WaitlistModal = ({ isOpen, onClose, onSubmit }) => {
                 className="w-full p-3 border border-gray-300 rounded-md text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400"
               />
             </div>
-            
+
+            <div className="mb-6">
+              <label htmlFor="phoneNo" className="block text-gray-700 mb-2">
+                Phone number<span className="text-red-500">*</span>
+              </label>
+              <input
+                id="phoneNo"
+                type="number"
+                value={phoneNo}
+                onChange={(e) => setPhoneNo(e.target.value)}
+                placeholder="Phone number"
+                required
+                className="w-full p-3 border border-gray-300 rounded-md text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400"
+              />
+            </div>
+
             <button
               type="submit"
               disabled={isSubmitting}
@@ -118,10 +140,6 @@ const WaitlistModal = ({ isOpen, onClose, onSubmit }) => {
                 </svg>
               )}
             </button>
-            
-            <p className="text-gray-600 text-sm mt-4">
-              By signing up, you're agreeing to our <a href="/terms" className="underline hover:text-gray-900">terms</a>.
-            </p>
           </form>
         </div>
       </div>
