@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import WaitlistModal from './WaitlistModal';
 const Testing = () => {
 
@@ -8,9 +8,9 @@ const Testing = () => {
 
   return (
     <section className="bg-black py-24 md:py-32">
-      <div 
-      id='testing'
-      className="container mx-auto px-4 max-w-screen-2xl">
+      <div
+        id='testing'
+        className="container mx-auto px-4 max-w-screen-2xl">
         <div className="bg-white rounded-4xl border border-gray-800 p-2 md:p-16">
           <div className="text-center mb-12">
             <h2 className="text-gray-500 text-base md:text-lg uppercase">
@@ -30,9 +30,9 @@ const Testing = () => {
                 Establish your foundational fitness markers and training zones to optimize future progress
               </p>
               <p className="text-black text-3xl font-bold mt-8">$250 per test</p>
-              <button 
-              onClick={openModal}
-               className="bg-gray-200 text-black px-8 py-4 rounded-4xl mt-8 w-full text-lg cursor-pointer group transition-all hover:shadow-md">
+              <button
+                onClick={openModal}
+                className="bg-gray-200 text-black px-8 py-4 rounded-4xl mt-8 w-full text-lg cursor-pointer group transition-all hover:shadow-md">
                 <div className="flex items-center justify-center transition-transform duration-300 ease-in-out">
                   <span className="transition-transform duration-300 ease-in-out group-hover:translate-x-[-10px]">Buy now & schedule</span>
                   <span className="ml-2 transition-transform duration-300 ease-in-out group-hover:translate-x-[10px]">→</span>
@@ -54,9 +54,9 @@ const Testing = () => {
                 Advanced metabolic assessment to fine-tune training zones and maximize race-day performance
               </p>
               <p className="text-black text-3xl font-bold mt-8">$350 per test</p>
-              <button 
-              onClick={openModal} 
-             className="bg-gray-200 text-black px-8 py-4 rounded-4xl mt-8 w-full text-lg cursor-pointer group transition-all hover:shadow-md">
+              <button
+                onClick={openModal}
+                className="bg-gray-200 text-black px-8 py-4 rounded-4xl mt-8 w-full text-lg cursor-pointer group transition-all hover:shadow-md">
                 <div className="flex items-center justify-center transition-transform duration-300 ease-in-out">
                   <span className="transition-transform duration-300 ease-in-out group-hover:translate-x-[-10px]">Buy now & schedule</span>
                   <span className="ml-2 transition-transform duration-300 ease-in-out group-hover:translate-x-[10px]">→</span>
@@ -81,8 +81,8 @@ const Testing = () => {
               </p>
               <p className="text-black text-3xl font-bold mt-8">$900 per test</p>
               <button
-              onClick={openModal} 
-              className="bg-black text-white px-8 py-4 rounded-4xl mt-8 w-full text-lg cursor-pointer group transition-all hover:shadow-md">
+                onClick={openModal}
+                className="bg-black text-white px-8 py-4 rounded-4xl mt-8 w-full text-lg cursor-pointer group transition-all hover:shadow-md">
                 <div className="flex items-center justify-center transition-transform duration-300 ease-in-out">
                   <span className="transition-transform duration-300 ease-in-out group-hover:translate-x-[-10px]"> Contact us </span>
                   <span className="ml-2 transition-transform duration-300 ease-in-out group-hover:translate-x-[10px]">→</span>

@@ -14,9 +14,9 @@ export default function OurProcess() {
   };
 
   return (
-    <div 
-    id="process"
-    className="w-full py-12 px-4 text-white relative max-w-full mx-auto">
+    <div
+      id="process"
+      className="w-full py-12 px-4 text-white relative max-w-full mx-auto">
       <h2 className="md:text-6xl text-4xl font-bold text-center">
         YOUR JOURNEY TO <span className="text-yellow-300 ">PEAK PERFORMANCE</span>
       </h2>
@@ -32,20 +32,29 @@ export default function OurProcess() {
       </div>
 
       {/* Dots / Steps Indicator */}
-      <div className="overflow-hidden mt-6 jus">
-        <div className="flex justify-center my-6 border-2 rounded-3xl py-1 sm:space-x-5 transition-transform duration-500 ease-in-out md:gap-4 md:mx-60">
-          {slides.map((slide, i) => (
-            <button
-              key={slide.id}
-              className={`md:px-4 py-2 rounded-full text-sm transition-all ${i === index ? "bg-white text-black" : "md:bg-black"
-                }`}
-              onClick={() => setIndex(i)}
-            >
-              {`${i + 1} ${slide.title}`}
-            </button>
-          ))}
+      <div className="overflow-hidden mt-6">
+        <div className="flex justify-center my-6 border border-gray-400 rounded-full py-1 px-1 bg-black shadow-md mx-auto max-w-3xl">
+          {slides.map((slide, i) => {
+            // On mobile (sm:hidden), only show current and next tab
+            const shouldShowOnMobile = i === index || i === (index + 1) % slides.length;
+
+            return (
+              <button
+                key={slide.id}
+                className={`
+            px-2 sm:px-4 py-2 rounded-full text-xs sm:text-sm whitespace-nowrap transition-all
+            ${i === index ? "bg-white text-gray-700 shadow-md" : "text-white"}
+            ${shouldShowOnMobile ? "block" : "hidden sm:block"}
+          `}
+                onClick={() => setIndex(i)}
+              >
+                {`${i + 1} ${slide.title}`}
+              </button>
+            );
+          })}
         </div>
       </div>
+
 
       {/* Carousel Container */}
       <div className="relative md:flex items-center justify-center max-w-5xl mx-auto overflow-hidden">

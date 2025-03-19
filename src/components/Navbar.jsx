@@ -32,7 +32,7 @@ const Navbar = () => {
 
 
           <div className="hidden md:flex space-x-6 text-lg">
-          <Link to="about" smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
+            <Link to="about" smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
               Home
             </Link>
             <Link to="optimize" smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
@@ -52,7 +52,7 @@ const Navbar = () => {
           <button
             onClick={openModal}
             className="hidden md:block bg-white text-gray-800 px-4 py-2 rounded-full font-semibold">
-            Join Waitlist
+            Join Now
           </button>
 
           <button onClick={() => setIsOpen(true)} className="md:hidden px-4">
@@ -81,26 +81,26 @@ const Navbar = () => {
             </div>
 
 
-            <div  className="flex flex-col items-center space-y-6 text-lg font-medium mt-10">
-            <Link to="about" onClick={() => setIsOpen(false)} smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
+            <div className="flex flex-col items-center space-y-6 text-lg font-medium mt-10">
+              <Link to="about" onClick={() => setIsOpen(false)} smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
                 Home
               </Link>
-            <Link to="optimize" onClick={() => setIsOpen(false)} smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
+              <Link to="optimize" onClick={() => setIsOpen(false)} smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
                 Optimize
               </Link>
               <Link to="services" onClick={() => setIsOpen(false)} smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
                 Services
               </Link>
-              <Link to="process" onClick={() => setIsOpen(false)}  smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
+              <Link to="process" onClick={() => setIsOpen(false)} smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
                 Our Process
               </Link>
-              <Link to="membership"onClick={() => setIsOpen(false)} smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
+              <Link to="membership" onClick={() => setIsOpen(false)} smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
                 Membership
               </Link>
             </div>
 
             <button onClick={openModal} className="mt-8 w-full bg-white text-gray-800 py-3 rounded-full font-semibold text-lg">
-              Join Waitlist
+              Join Now
             </button>
           </motion.div>
         )}

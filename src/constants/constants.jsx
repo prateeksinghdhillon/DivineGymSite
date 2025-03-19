@@ -70,7 +70,7 @@ const sections = [
               <li>• Smart Adjustments to Keep You Training Safely</li>
             </ul>
           </div>
-          
+
         </div>
         <div className="w-full md:w-1/3 flex justify-end">
           <img
@@ -128,7 +128,7 @@ const slides = [
   {
     id: 2,
     title: "Progress Tracking",
-    heading: "TRACK YOUR FITNESS JOURNEY WITH EXPERT INSIGHTS",
+    heading: "TRACKING YOUR FITNESS JOURNEY WITH OUR EXPERT INSIGHTS",
     image: "/assets/laptop.jpg",
     bgColor: "bg-[#9091FB]",
   },

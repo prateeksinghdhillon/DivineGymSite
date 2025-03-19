@@ -6,30 +6,30 @@ import shalabh from "/shalabh.png";
 
 const Counter = ({ from, to, suffix = "", duration = 1.5 }) => {
   const [displayValue, setDisplayValue] = React.useState(from);
-  const { ref, inView } = useInView({ 
+  const { ref, inView } = useInView({
     triggerOnce: false,
-    threshold: 0.1 
+    threshold: 0.1
   });
-  
+
   useEffect(() => {
     let animationFrame;
-    
+
     if (inView) {
       // Reset to starting value when coming into view
       setDisplayValue(from);
-      
+
       let startTime;
       const startValue = from;
       const totalChange = to - startValue;
-      
+
       const animate = (timestamp) => {
         if (!startTime) startTime = timestamp;
         const elapsedTime = timestamp - startTime;
         const progress = Math.min(elapsedTime / (duration * 1000), 1);
-        
+
         // For numeric animation, use easeOutQuad timing function
         const easedProgress = 1 - Math.pow(1 - progress, 2);
-        
+
         if (suffix === "X") {
           // For the "X" counter, increment in steps (1X, 2X, 3X)
           const stepValue = Math.floor(startValue + easedProgress * totalChange);
@@ -39,18 +39,18 @@ const Counter = ({ from, to, suffix = "", duration = 1.5 }) => {
           const newValue = Math.round(startValue + easedProgress * totalChange);
           setDisplayValue(newValue);
         }
-        
+
         if (progress < 1) {
           animationFrame = requestAnimationFrame(animate);
         }
       };
-      
+
       animationFrame = requestAnimationFrame(animate);
     } else {
       // When scrolling away, reset to the starting value to prepare for next view
       setDisplayValue(from);
     }
-    
+
     return () => {
       if (animationFrame) {
         cancelAnimationFrame(animationFrame);
@@ -72,19 +72,19 @@ const Counter = ({ from, to, suffix = "", duration = 1.5 }) => {
 const Optimize = () => {
   // Create a ref for the entire section
   const sectionRef = useRef(null);
-  
+
   // Use inView to detect when section is visible
   const [imgRef, imgInView] = useInView({
     threshold: 0.1,
     triggerOnce: false
   });
-  
+
   // Use the section's own scroll progress for zoom effect
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start end", "end start"]
   });
-  
+
   // Create scale effect based on section's scroll progress
   const scale = useTransform(
     scrollYProgress,
@@ -93,14 +93,14 @@ const Optimize = () => {
   );
 
   return (
-    <div 
+    <div
       id="optimize"
-      ref={sectionRef} 
+      ref={sectionRef}
       className="geist-font-500 max-w-10xl container mx-auto px-4 my-20"
     >
       <div className="flex flex-col md:flex-row">
         {/* Left Section (White Box with Proper Padding) */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -133,15 +133,15 @@ const Optimize = () => {
         </motion.div>
 
         {/* Right Section (Image with Zoom Effect) */}
-        <div 
-          ref={imgRef} 
+        <div
+          ref={imgRef}
           className="md:w-1/2 md:ml-12 md:mt-20 mt-8 order-1 rounded-2xl relative overflow-hidden"
           style={{
             height: "900px"
           }}
         >
-          <motion.div 
-            style={{ 
+          <motion.div
+            style={{
               scale,
               width: "100%",
               height: "100%",
@@ -153,8 +153,8 @@ const Optimize = () => {
             viewport={{ once: false, threshold: 0.1 }}
             className="overflow-hidden  rounded-2xl"
           >
-            <img 
-              src={shalabh} 
+            <img
+              src={shalabh}
               className="w-full h-full object-cover absolute top-0 left-0 rounded-2xl"
               alt="Workout"
               style={{

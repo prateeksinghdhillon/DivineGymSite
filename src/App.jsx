@@ -12,22 +12,22 @@ import FooterInterestSection from './components/FooterInterestSection'
 
 
 function App() {
-  
+
 
   return (
     <>
-    <div id="about" className='background-img bg-fade-img'>
-    <Navbar/>
-    <About/>
-    </div>
-    <Optimize/>
-    <Services/>
-    {/* <Testing/> */}
-    <OurProcess/>
-    <Membership/>
-    <FooterInterestSection/>
+      <div id="about" className='background-img bg-fade-img'>
+        <Navbar />
+        <About />
+      </div>
+      <Optimize />
+      <Services />
+      {/* <Testing/> */}
+      <OurProcess />
+      <Membership />
+      <FooterInterestSection />
     </>
-    
+
   )
 }
 

@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { sections } from '../constants/constants';
-import WaitlistModal from './WaitlistModal'; 
+import WaitlistModal from './WaitlistModal';
 
 const Services = () => {
   const [openSection, setOpenSection] = useState(null);
@@ -14,18 +14,18 @@ const Services = () => {
     setOpenSection(openSection === id ? null : id);
   };
   return (
-    <div 
-    id='services'
-    className=" max-w-8xl mx-auto text-white geist-font-700">
+    <div
+      id='services'
+      className=" max-w-8xl mx-auto text-white geist-font-700">
       {/* New Section Above */}
       <div className="flex flex-col md:flex-row items-end gap-8 bg-black p-10 rounded-lg">
-        <button 
-        onClick={openModal} 
-        className="md:w-1/2 w-full relative px-8 py-3 my-3 text-gray-800 bg-yellow-200 rounded-full text-lg font-medium shadow-[0_0_20px_rgba(255,255,150,0.6)] hover:shadow-[0_0_30px_rgba(255,255,150,0.9)] z-[1] cursor-pointer group transition-all">
-        <div className="flex items-center justify-center transition-transform duration-300 ease-in-out">
-        <span className="transition-transform duration-300 ease-in-out group-hover:translate-x-[-20px]">Join waitlist</span> 
-        <span className="ml-2 transition-transform duration-300 ease-in-out group-hover:translate-x-[20px]">→</span>
-        </div>
+        <button
+          onClick={openModal}
+          className="md:w-1/2 w-full relative px-8 py-3 my-3 text-gray-800 bg-yellow-200 rounded-full text-lg font-medium shadow-[0_0_20px_rgba(255,255,150,0.6)] hover:shadow-[0_0_30px_rgba(255,255,150,0.9)] z-[1] cursor-pointer group transition-all">
+          <div className="flex items-center justify-center transition-transform duration-300 ease-in-out">
+            <span className="transition-transform duration-300 ease-in-out group-hover:translate-x-[-20px]">Join Now</span>
+            <span className="ml-2 transition-transform duration-300 ease-in-out group-hover:translate-x-[20px]">→</span>
+          </div>
         </button>
         <WaitlistModal isOpen={isModalOpen} onClose={closeModal} />
         <div className="text-white md:w-1/2">

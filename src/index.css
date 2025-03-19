@@ -40,7 +40,7 @@ html body {
 
 /* Overlay effect for fading */
 .bg-fade-image {
-  background-image: url('/rider.webp'); 
+  background-image: url("/rider.webp");
   background-size: cover;
   background-position: center;
   position: relative;
@@ -52,7 +52,7 @@ html body {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 10%; 
+  height: 10%;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, black 100%);
 }
 .overlay-image {
@@ -60,8 +60,8 @@ html body {
   top: 0;
   width: 100vw;
   height: 100%;
-  background: url('/9ErWmXn2IIfOUCaXNwDeuxqJXM.png') repeat;
-  pointer-events: none; 
-  opacity: 0.4; 
+  background: url("/9ErWmXn2IIfOUCaXNwDeuxqJXM.png") repeat;
+  pointer-events: none;
+  opacity: 0.4;
   z-index: 20;
 }
