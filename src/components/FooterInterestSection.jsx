@@ -9,7 +9,7 @@ const FooterInterestSection = () => {
   
   // WhatsApp redirect function
   const redirectToWhatsApp = () => {
-    const phoneNumber = "9112345678"; // Replace with your actual number
+    const phoneNumber = "918979988358";
     const whatsappUrl = `https://wa.me/${phoneNumber}`;
     window.open(whatsappUrl, '_blank');
   };
