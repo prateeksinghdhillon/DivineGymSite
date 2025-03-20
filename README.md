@@ -11,10 +11,8 @@ Divine Fitness is designed to **push limits and optimize performance** through e
 - **Future-proof fitness strategies** to sustain long-term success.
 
 ## 🎯 Tech Stack
-- **Frontend**: React.js, Tailwind CSS
-- **Backend**: Node.js, Express.js
-- **Database**: MongoDB (or Firebase)
-- **Hosting**: Vercel / Netlify
+- **Frontend**: React.js, Css, Vite
+- **Hosting**: Vercel
 
 ## 📌 Installation & Setup
 1. Clone the repository:
