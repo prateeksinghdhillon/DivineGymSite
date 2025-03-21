@@ -51,19 +51,19 @@ export default function OurProcess() {
           style={{ transform: `translateX(-${index * 50}%)` }}
         >
           {slides.map((slide) => (
-            <div key={slide.id} className={`md:flex-shrink-0 w-1/2 sm:w-1/2 p-4 ${slide.bgColor} rounded-3xl flex flex-col text-black`}>
+            <div key={slide.id} className={`md:flex-shrink-0 w-1/2 sm:w-1/2 p-4 ${slide.bgColor} rounded-3xl flex flex-col md:flex-row text-black`}>
               {/* Text Section */}
-              <div className="w-full flex flex-col p-4 pb-0">
+              <div className="w-full flex flex-col p-4 pb-0 md:pb-4 order-1 md:order-none">
                 <h4 className="text-xs uppercase opacity-75 mb-1">{slide.title}</h4>
                 <h2 className="text-lg font-black uppercase leading-tight">{slide.heading}</h2>
               </div>
 
               {/* Image Section */}
-              <div className="w-full mt-auto">
+              <div className="w-full order-2 md:order-none mt-8 md:mt-0">
                 <img
                   src={slide.image}
                   alt={slide.title}
-                  className="w-full h-auto  mt-5 object-cover rounded-3xl"
+                  className="w-full h-full object-cover rounded-3xl"
                 />
               </div>
             </div>
