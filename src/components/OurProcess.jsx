@@ -61,11 +61,13 @@ export default function OurProcess() {
 
                 {/* Image Section */}
                 <div className="w-full mt-auto md:mt-0">
-                  <img
-                    src={slide.image}
-                    alt={slide.title}
-                    className="w-full h-full object-cover rounded-3xl"
-                  />
+                  <div className="h-48 sm:h-64 md:h-72 overflow-hidden rounded-3xl">
+                    <img
+                      src={slide.image}
+                      alt={slide.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
