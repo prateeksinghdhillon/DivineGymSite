@@ -18,24 +18,13 @@ export default function OurProcess() {
       id="process"
       className="w-full py-12 px-4 text-white relative max-w-full mx-auto">
       <h2 className="md:text-6xl text-4xl font-bold text-center">
-        YOUR JOURNEY TO <span className="text-yellow-300 ">PEAK PERFORMANCE</span>
+        YOUR JOURNEY TO <span className="text-yellow-200 ">PEAK PERFORMANCE</span>
       </h2>
-
-      {/* Navigation Arrows */}
-      <div className="flex justify-between items-center mt-4">
-        <button onClick={prevSlide} className="text-white bg-black p-3 rounded-full">
-          <FaArrowLeft />
-        </button>
-        <button onClick={nextSlide} className="text-white bg-black p-3 rounded-full">
-          <FaArrowRight />
-        </button>
-      </div>
 
       {/* Dots / Steps Indicator */}
       <div className="overflow-hidden mt-6">
         <div className="flex justify-center my-6 border border-gray-400 rounded-full py-1 px-1 bg-black shadow-md mx-auto max-w-3xl">
           {slides.map((slide, i) => {
-            // On mobile (sm:hidden), only show current and next tab
             const shouldShowOnMobile = i === index || i === (index + 1) % slides.length;
 
             return (
@@ -55,7 +44,6 @@ export default function OurProcess() {
         </div>
       </div>
 
-
       {/* Carousel Container */}
       <div className="relative md:flex items-center justify-center max-w-5xl mx-auto overflow-hidden">
         <div
@@ -63,20 +51,36 @@ export default function OurProcess() {
           style={{ transform: `translateX(-${index * 50}%)` }}
         >
           {slides.map((slide) => (
-            <div key={slide.id} className={`md:flex-shrink-0 w-1/2 sm:w-1/2 p-4 ${slide.bgColor} rounded-xl md:flex flex-row items-center text-black gap-6`}>
+            <div key={slide.id} className={`md:flex-shrink-0 w-1/2 sm:w-1/2 p-4 ${slide.bgColor} rounded-3xl flex flex-col text-black`}>
               {/* Text Section */}
-              <div className="w-full flex flex-col">
-                <h4 className="text-xs uppercase opacity-75">{slide.title}</h4>
-                <h3 className="font-bold">{slide.heading}</h3>
+              <div className="w-full flex flex-col p-4 pb-0">
+                <h4 className="text-xs uppercase opacity-75 mb-1">{slide.title}</h4>
+                <h2 className="text-lg font-black uppercase leading-tight">{slide.heading}</h2>
               </div>
+
               {/* Image Section */}
-              <div className="md:w-full w-30 py-5">
-                <img src={slide.image} alt={slide.title} className="md:rounded-xl rounded-xl md:w-full md:h-60 object-contain" />
+              <div className="w-full mt-auto">
+                <img
+                  src={slide.image}
+                  alt={slide.title}
+                  className="w-full h-auto  mt-5 object-cover rounded-3xl"
+                />
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Navigation Arrows */}
+      <div className="flex justify-between items-center mt-4">
+        <button onClick={prevSlide} className="text-white bg-black p-3 rounded-full">
+          <FaArrowLeft />
+        </button>
+        <button onClick={nextSlide} className="text-white bg-black p-3 rounded-full">
+          <FaArrowRight />
+        </button>
+      </div>
+
     </div>
   );
 }
